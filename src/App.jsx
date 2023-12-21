@@ -1,5 +1,6 @@
 import { CardNo } from './components/CardNo'
 import { CardType } from './components/CardType'
+import { ExpDate } from './components/ExpDate'
 import { CardName } from './components/NameCard'
 
 function App() {
@@ -9,8 +10,9 @@ function App() {
       <h1 className="text-cyan-300 font-extrabold">Pay now. Regret later</h1>
       <form className='flex flex-col w-1/3'>
         <CardType />
-        <CardNo />
         <CardName />
+        <CardNo />
+        <ExpDate />
       </form>
     </>
   )

@@ -3,6 +3,7 @@ import { CardNo } from './components/CardNo'
 import { CardType } from './components/CardType'
 import { ExpDate } from './components/ExpDate'
 import { CardName } from './components/NameCard'
+import { SubmitButton } from './components/Submit'
 
 function App() {
 
@@ -13,9 +14,10 @@ function App() {
         <CardType />
         <CardName />
         <CardNo />
-        <div className='flex justify-between'>
+        <div className='flex items-center justify-between'>
           <ExpDate />
           <CCVNo />
+          <SubmitButton />
         </div>
       </form>
     </>

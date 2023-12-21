@@ -1,3 +1,4 @@
+import { CCVNo } from './components/CCVField'
 import { CardNo } from './components/CardNo'
 import { CardType } from './components/CardType'
 import { ExpDate } from './components/ExpDate'
@@ -12,7 +13,10 @@ function App() {
         <CardType />
         <CardName />
         <CardNo />
-        <ExpDate />
+        <div className='flex justify-between'>
+          <ExpDate />
+          <CCVNo />
+        </div>
       </form>
     </>
   )

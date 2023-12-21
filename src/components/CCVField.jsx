@@ -23,7 +23,7 @@ export function CCVNo() {
           id="CCVNo"
           type="password"
           placeholder="123"
-          onChange={e => setCCVNo(cleanCCVNo(e.target.value))}
+          onChange={e => setCCVNo(cleanCCV(e.target.value))}
           className='border-cyan-300 border-solid border-2 rounded'
         >
         </input>

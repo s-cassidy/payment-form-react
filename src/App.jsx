@@ -12,7 +12,7 @@ function App() {
       <div className='flex flex-col h-screen w-screen items-center justify-center'>
         <div className='flex flex-col justify-center'>
           <h1 className="text-cyan-300 font-extrabold">Pay now. Regret later</h1>
-          <form className='flex flex-col w-2/3'>
+          <form className='flex flex-col w-4/5'>
             <CardType />
             <CardName />
             <CardNo />

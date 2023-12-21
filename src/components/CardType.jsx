@@ -16,8 +16,8 @@ export function CardType() {
         className='border-cyan-300 border-solid border-2 rounded'
       >
         <option value='visa'>Visa</option>
-        <option value='visa'>American Express</option>
-        <option value='visa'>MasterCard</option>
+        <option value='american-express'>American Express</option>
+        <option value='mastercard'>MasterCard</option>
       </select>
     </>
 

@@ -9,17 +9,21 @@ function App() {
 
   return (
     <>
-      <h1 className="text-cyan-300 font-extrabold">Pay now. Regret later</h1>
-      <form className='flex flex-col w-1/3'>
-        <CardType />
-        <CardName />
-        <CardNo />
-        <div className='flex items-center justify-between'>
-          <ExpDate />
-          <CCVNo />
-          <SubmitButton />
+      <div className='flex flex-col h-screen w-screen items-center justify-center'>
+        <div className='flex flex-col justify-center'>
+          <h1 className="text-cyan-300 font-extrabold">Pay now. Regret later</h1>
+          <form className='flex flex-col w-2/3'>
+            <CardType />
+            <CardName />
+            <CardNo />
+            <div className='flex items-center justify-between'>
+              <ExpDate />
+              <CCVNo />
+              <SubmitButton />
+            </div>
+          </form>
         </div>
-      </form>
+      </div>
     </>
   )
 }

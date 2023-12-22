@@ -2,7 +2,8 @@ import { useState } from 'react'
 
 
 export function CardNumberInput() {
-  const [cardNo, setCardNo] = useState("");
+  const [cardNumber, setCardNumber] = useState("");
+
   function addSpaces(cardNumber) {
     const prettyNumberArray = [];
     for (let i = 0; i < cardNumber.length; i++) {
@@ -14,28 +15,36 @@ export function CardNumberInput() {
     return prettyNumberArray.join('')
   }
 
-
-  function cleanCardNo(cardNumber) {
-    cardNumber = cardNumber.split('').filter((c) => c >= '0' && c <= '9').join('');
-    if (cardNumber.length > 16) {
-      cardNumber = cardNumber.slice(0, 16);
-    }
-    return cardNumber
+  function cleanCardNumber(cardNumber) {
+    const cardNumberClean = cardNumber.split('')
+      .filter((c) => c >= '0' && c <= '9')
+      .join('')
+      .slice(0, 16);
+    return cardNumberClean
   }
+
+  function handleInput(cardNumberInput) {
+    const cleanedNumber = cleanCardNumber(cardNumberInput);
+    const formattedNumber = addSpaces(cleanedNumber);
+    setCardNumber(formattedNumber);
+  }
+
   return (
     <>
-      <label className='text-gray-200 font-bold' htmlFor='cardNo'>Card Number
+      <label className='text-gray-200 font-bold' htmlFor='cardNumber'>Card Number
       </label>
       <input
-        name="cardNo"
-        value={addSpaces(cardNo)}
-        id="cardNo"
+        name="cardNumber"
+        value={cardNumber}
+        id="cardNumber"
         type="tel"
         placeholder="XXXX XXXX XXXX XXXX"
-        onChange={e => setCardNo(cleanCardNo(e.target.value))}
+        onChange={e => handleInput(e.target.value)}
         className='border-cyan-300 border-solid border-2 rounded'
       >
       </input>
     </>
   )
 }
+
+

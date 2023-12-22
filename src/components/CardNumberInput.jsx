@@ -5,7 +5,7 @@ export function CardNumberInput() {
   const [cardNumber, setCardNumber] = useState("");
 
 
-  function handleInput(cardNumberInput) {
+  const handleInput = (cardNumberInput) => {
     const cleanedNumber = cleanCardNumber(cardNumberInput);
     const formattedNumber = addSpaces(cleanedNumber);
     setCardNumber(formattedNumber);

@@ -39,13 +39,12 @@ function cleanCardNumber(cardNumber) {
 
 
 function addSpaces(cardNumber) {
-  const prettyNumberArray = [];
+  let formattedCardNumber = "";
+  let digit;
   for (let i = 0; i < cardNumber.length; i++) {
-    if (i > 0 && i % 4 === 0) {
-      prettyNumberArray.push(' ');
-    }
-    prettyNumberArray.push(cardNumber[i]);
+    digit = cardNumber[i]
+    formattedCardNumber += (i > 0 && i % 4 === 0) ? " " + digit : digit;
   }
-  return prettyNumberArray.join('')
+  return formattedCardNumber
 }
 

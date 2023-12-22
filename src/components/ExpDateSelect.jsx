@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 
-export function ExpDate() {
+export function ExpDateSelect() {
   const [month, setMonth] = useState('')
   const [year, setYear] = useState('')
 

@@ -2,23 +2,23 @@ import { useState } from 'react'
 
 
 export function CCVInput() {
-  const [CCVNo, setCCVNo] = useState("");
+  const [CCVNumber, setCCVNumber] = useState("");
 
   const handleInput = (CCVInput) => {
     const cleanedCCV = cleanCCV(CCVInput);
-    setCCVNo(cleanedCCV);
+    setCCVNumber(cleanedCCV);
   }
 
   return (
     <>
       <div className='flex flex-col max-w-9'>
 
-        <label className='text-gray-200 font-bold' htmlFor='CCVNo'>CCV
+        <label className='text-gray-200 font-bold' htmlFor='CCVNumber'>CCV
         </label>
         <input
-          name="CCVNo"
-          value={CCVNo}
-          id="CCVNo"
+          name="CCVNumber"
+          value={CCVNumber}
+          id="CCVNumber"
           type="password"
           placeholder="123"
           onChange={e => handleInput(e.target.value)}

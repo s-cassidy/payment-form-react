@@ -4,7 +4,6 @@ import { useState } from 'react'
 export function CardNameInput() {
   const [cardName, setCardName] = useState("");
 
-
   return (
     <>
       <label className='text-gray-200 font-bold' htmlFor='cardName'>Name on card

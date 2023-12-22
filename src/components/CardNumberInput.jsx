@@ -4,7 +4,6 @@ import { useState } from 'react'
 export function CardNumberInput() {
   const [cardNumber, setCardNumber] = useState("");
 
-
   const handleInput = (cardNumberInput) => {
     const cleanedNumber = cleanCardNumber(cardNumberInput);
     const formattedNumber = addSpaces(cleanedNumber);

@@ -7,7 +7,6 @@ export function ExpDateSelect() {
 
   return (
     <>
-
       <fieldset className='border-2 border-solid rounded border-cyan-300'>
         <legend className='font-bold text-gray-200 pl-1 pr-1'>Expiry date</legend>
         <div className='flex'>
@@ -28,8 +27,8 @@ export function ExpDateSelect() {
               }
             </select>
           </span>
-          <span className='flex flex-col m-2 mt-0.5'>
 
+          <span className='flex flex-col m-2 mt-0.5'>
             <label className='text-gray-200 font-bold' htmlFor='exp-year'>Year</label>
             <select
               name="exp-year"
@@ -49,6 +48,5 @@ export function ExpDateSelect() {
         </div>
       </fieldset>
     </>
-
   )
 }

@@ -4,24 +4,6 @@ import { useState } from 'react'
 export function CardNumberInput() {
   const [cardNumber, setCardNumber] = useState("");
 
-  function addSpaces(cardNumber) {
-    const prettyNumberArray = [];
-    for (let i = 0; i < cardNumber.length; i++) {
-      if (i > 0 && i % 4 === 0) {
-        prettyNumberArray.push(' ');
-      }
-      prettyNumberArray.push(cardNumber[i]);
-    }
-    return prettyNumberArray.join('')
-  }
-
-  function cleanCardNumber(cardNumber) {
-    const cardNumberClean = cardNumber.split('')
-      .filter((c) => c >= '0' && c <= '9')
-      .join('')
-      .slice(0, 16);
-    return cardNumberClean
-  }
 
   function handleInput(cardNumberInput) {
     const cleanedNumber = cleanCardNumber(cardNumberInput);
@@ -47,4 +29,23 @@ export function CardNumberInput() {
   )
 }
 
+function cleanCardNumber(cardNumber) {
+  const cardNumberClean = cardNumber.split('')
+    .filter((c) => c >= '0' && c <= '9')
+    .join('')
+    .slice(0, 16);
+  return cardNumberClean
+}
+
+
+function addSpaces(cardNumber) {
+  const prettyNumberArray = [];
+  for (let i = 0; i < cardNumber.length; i++) {
+    if (i > 0 && i % 4 === 0) {
+      prettyNumberArray.push(' ');
+    }
+    prettyNumberArray.push(cardNumber[i]);
+  }
+  return prettyNumberArray.join('')
+}
 

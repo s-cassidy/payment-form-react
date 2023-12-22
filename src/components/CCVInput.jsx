@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 
-export function CCVNo() {
+export function CCVInput() {
   const [CCVNo, setCCVNo] = useState("");
 
   function cleanCCV(CCV) {

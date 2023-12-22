@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 
-export function CardNo() {
+export function CardNumberInput() {
   const [cardNo, setCardNo] = useState("");
   function addSpaces(cardNumber) {
     const prettyNumberArray = [];

@@ -1,18 +1,18 @@
-import { CCVNo } from './components/CCVField'
-import { CardNo } from './components/CardNo'
-import { CardType } from './components/CardType'
-import { ExpDate } from './components/ExpDate'
-import { CardName } from './components/NameCard'
-import { SubmitButton } from './components/Submit'
+import { CCVInput } from './components/CCVInput'
+import { CardNumberInput } from './components/CardNumberInput'
+import { CardTypeSelect } from './components/CardTypeSelect'
+import { ExpDateSelect } from './components/ExpDateSelect'
+import { CardNameInput } from './components/CardNameInput'
+import { SubmitButton } from './components/SubmitButton'
 
 export function PaymentForm() {
   <form className='flex flex-col w-4/5'>
-    <CardType />
-    <CardName />
-    <CardNo />
+    <CardTypeSelect />
+    <CardNameInput />
+    <CardNumberInput />
     <div className='flex items-center justify-between'>
-      <ExpDate />
-      <CCVNo />
+      <ExpDateSelect />
+      <CCVInput />
       <SubmitButton />
     </div>
   </form>

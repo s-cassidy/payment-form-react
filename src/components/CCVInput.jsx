@@ -31,9 +31,8 @@ export function CCVInput() {
 }
 
 function cleanCCV(CCV) {
-  CCV = CCV.split('')
+  return CCV.split('')
     .filter((c) => c >= '0' && c <= '9')
     .join('')
     .slice(0, 3)
-  return CCV
 }

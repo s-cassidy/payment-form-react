@@ -29,19 +29,17 @@ export function CardNumberInput() {
 }
 
 function cleanCardNumber(cardNumber) {
-  const cardNumberClean = cardNumber.split('')
+  return cardNumber.split('')
     .filter((c) => c >= '0' && c <= '9')
     .join('')
     .slice(0, 16);
-  return cardNumberClean
 }
 
 
 function addSpaces(cardNumber) {
   let formattedCardNumber = "";
-  let digit;
   for (let i = 0; i < cardNumber.length; i++) {
-    digit = cardNumber[i]
+    let digit = cardNumber[i]
     formattedCardNumber += (i > 0 && i % 4 === 0) ? " " + digit : digit;
   }
   return formattedCardNumber

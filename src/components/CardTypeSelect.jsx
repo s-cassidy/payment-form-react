@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 
-export function CardType() {
+export function CardTypeSelect() {
   const [cardType, setCardType] = useState('')
 
   return (

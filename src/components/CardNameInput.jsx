@@ -1,9 +1,8 @@
 import { useState } from 'react'
 
 
-export function CardName() {
+export function CardNameInput() {
   const [cardName, setCardName] = useState("");
-
 
   return (
     <>
